@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 const howard = 131237025251721216;
 const patrick = 102828388909072384;
-const michaelk = 141019900993994753;
+const michaelk = "141019900993994753";
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
