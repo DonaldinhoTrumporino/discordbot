@@ -31,12 +31,13 @@ client.on("guildDelete", guild => {
   client.user.setActivity(`CNN`);
 });
 
-
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
   if(message.author.bot) return;
-  
+
+/***************************************** do not edit above this line ***************************************************/
+/******************************************* add your functions here *****************************************************/
   if(message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
   }
@@ -110,6 +111,7 @@ client.on("message", async message => {
 	  }
   }
 
+/***************************************** do not edit above this line ***************************************************/
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
