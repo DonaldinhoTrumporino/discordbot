@@ -44,7 +44,7 @@ client.on("message", async message => {
 /******************************************* add your functions here *****************************************************/
   
   if(message.author.id === michaelk){
-    message.channel.send('Test);
+    message.channel.send('Test');
   }
 	
   if(message.content.includes('furry')) {
