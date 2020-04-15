@@ -1,9 +1,30 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
 
-const howard = 131237025251721216;
-const patrick = 102828388909072384;
-const michaelk = "141019900993994753";
+//Howard
+const HowardID = "131237025251721216";
+//Adam
+const AdamID = "675736121967247372";
+//Chauncer
+const ChauncerID = "156127089907597312";
+//Reed
+const ReedID = "616615314850971658";
+//Bryan
+const BryanID = "131088438525952000";
+//MichaelL
+const ListiID = "131130843321073665";
+//Will
+const WillID = "131095841166327809";
+//TaylorD
+const DickensID = "131090455675928578";
+//Max
+const MaxID = "132516430452097024";
+//Pat
+const PatID = "102828388909072384";
+//MichaelK
+const KowpakID = "141019900993994753";
+//Urbane
+const UrbaneID = "257310330680639488";
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
