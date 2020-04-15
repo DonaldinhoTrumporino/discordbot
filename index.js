@@ -43,7 +43,7 @@ client.on("message", async message => {
 /***************************************** do not edit above this line ***************************************************/
 /******************************************* add your functions here *****************************************************/
   
-  if(message.author.id === michael){
+  if(message.author.id === michaelk){
     message.channel.send('Test);
   }
 	
