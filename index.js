@@ -109,7 +109,7 @@ client.on("message", async message => {
     message.channel.send('https://www.politicalcompass.org/');
   }
 	
-  if (((message.author.toString() == HowardID) || (message.author.toString() == MaxID) || (message.author.toString() == KowpakID)) && message.content.includes('>')) {
+  if (((message.author.id.toString() == HowardID) || (message.author.id.toString() == MaxID) || (message.author.id.toString() == KowpakID)) && message.content.includes('>')) {
 	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 	
