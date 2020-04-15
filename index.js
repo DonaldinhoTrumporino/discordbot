@@ -64,9 +64,6 @@ client.on("message", async message => {
 /***************************************** do not edit above this line ***************************************************/
 /******************************************* add your functions here *****************************************************/
   
-  if (message.author.id === PatID){
-	  message.channel.send('testing');
-  }
 	
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
@@ -111,16 +108,8 @@ client.on("message", async message => {
   if(message.content.includes('compass') || message.content.includes('politic')) {
     message.channel.send('https://www.politicalcompass.org/');
   }
-  
-  if ((message.author.id === PatID) && message.content.includes('>')) {
-	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
-  }
 	
-  if ((message.author.toString() == HowardID) && message.content.includes('>')) {
-	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
-  }
-
-  if ((message.author.toString() == MaxID) && message.content.includes('>')) {
+  if (((message.author.toString() == HowardID) || (message.author.toString() == MaxID)) && message.content.includes('>')) {
 	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 	
