@@ -116,11 +116,11 @@ client.on("message", async message => {
 	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
   }
 	
-  if (message.author.toString() == HowardID) && message.content.includes('>') {
+  if ((message.author.toString() == HowardID) && message.content.includes('>')) {
 	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
   }
 
-  if (message.author.toString() == MaxID) && message.content.includes('>') {
+  if ((message.author.toString() == MaxID) && message.content.includes('>')) {
 	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
   }
 	
