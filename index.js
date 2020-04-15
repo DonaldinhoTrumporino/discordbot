@@ -42,7 +42,7 @@ client.on("message", async message => {
   }
 
   if(message.content.includes('travis')) {
-    message.channel.send('Travis is a furry');
+    message.channel.send('Travis is a furry!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   }
   
   if(message.content.includes('tranny') || message.content.includes('trannie')) {
