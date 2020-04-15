@@ -47,7 +47,7 @@ client.on("message", async message => {
   }
   
   if(message.content.includes('tranny') || message.content.includes('trannie')) {
-    message.channel.send('https://i.4cdn.org/b/1586919117452.png'); return;
+    message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
   if(message.content.includes('gay')) {
