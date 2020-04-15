@@ -78,7 +78,7 @@ client.on("message", async message => {
   }
   
   /*  
-  // libleft 
+  // libleft     
   if(message.member.roles.equals("699806549866053722")){
 	  message.channel.send('disgusting libleft');
   }
