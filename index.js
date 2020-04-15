@@ -64,43 +64,43 @@ client.on("message", async message => {
 /***************************************** do not edit above this line ***************************************************/
 /******************************************* add your functions here *****************************************************/
   
-  if(message.author.id === Pat){
+  if (message.author.id === PatID){
 	  message.channel.send('testing');
   }
 	
-  if(message.content.includes('furry')) {
+  if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
   }
 
-  if(message.content.includes('travis')) {
+  if (message.content.includes('travis')) {
     message.channel.send('Travis is a furry!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   }
   
-  if(message.content.includes('tranny') || message.content.includes('trannie')) {
+  if (message.content.includes('tranny') || message.content.includes('trannie')) {
     message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
-  if(message.content.includes('gay')) {
+  if (message.content.includes('gay')) {
     message.channel.send('Not gay. Fag you uncultured swine');
   }
   
-  if(message.content.includes('nigga') || message.content.includes('nigger')) {
+  if (message.content.includes('nigga') || message.content.includes('nigger')) {
     message.channel.send("", {file: "https://i.imgur.com/CcsdIVX.jpeg"});
   }
 
-  if(message.content.includes('child porn') || message.content.includes('CHILD PORN')) {
+  if (message.content.includes('child porn') || message.content.includes('CHILD PORN')) {
     message.channel.send('CHILD PORN!!!!!', {file: "https://i.imgur.com/LCKw4bf.png"}); return;
   }
 
-  if(message.content.includes('porn') || message.content.includes('Porn')) {
+  if (message.content.includes('porn') || message.content.includes('Porn')) {
     message.channel.send("", {file: "https://i.4cdn.org/gif/1586742606555.webm"});
   }
   
-  if(message.content.includes('trump') || message.content.includes('Trump') || message.content.includes('donald') || message.content.includes('Donald')) {
+  if (message.content.includes('trump') || message.content.includes('Trump') || message.content.includes('donald') || message.content.includes('Donald')) {
     message.channel.send("", {file: "https://i.imgur.com/MSotV1j.jpg"});
   }
 
-  if(message.content.includes('age') || message.content.includes('attractive') || message.content.includes('Max') || message.content.includes('max')) {
+  if (message.content.includes('age') || message.content.includes('attractive') || message.content.includes('Max') || message.content.includes('max')) {
     message.channel.send("", {file: "https://i.imgur.com/LCKw4bf.png"});
   }
   
@@ -112,6 +112,18 @@ client.on("message", async message => {
     message.channel.send('https://www.politicalcompass.org/');
   }
   
+  if (message.author.id === PatID) && message.content.includes('>') {
+	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
+  }
+	
+  if (message.author.toString() == HowardID) && message.content.includes('>') {
+	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
+  }
+
+  if (message.author.toString() == MaxID) && message.content.includes('>') {
+	message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg');
+  }
+	
   /*  
   // libleft
   if(message.member.roles.equals("699806549866053722")){
