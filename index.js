@@ -40,6 +40,10 @@ client.on("message", async message => {
   if(message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
   }
+
+  if(message.content.includes('travis')) {
+    message.channel.send('Travis is a furry');
+  }
   
   if(message.content.includes('tranny') || message.content.includes('trannie')) {
     message.channel.send('https://i.4cdn.org/b/1586919117452.png'); return;
@@ -78,7 +82,7 @@ client.on("message", async message => {
   }
   
   /*  
-  // libleft     
+  // libleft
   if(message.member.roles.equals("699806549866053722")){
 	  message.channel.send('disgusting libleft');
   }
