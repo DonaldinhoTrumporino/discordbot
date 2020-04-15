@@ -77,10 +77,6 @@ client.on("message", async message => {
     message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
-  if (message.content.includes('gay')) {
-    message.channel.send('Not gay. Fag you uncultured swine');
-  }
-  
   if (message.content.includes('nigga') || message.content.includes('nigger')) {
     message.channel.send("", {file: "https://i.imgur.com/CcsdIVX.jpeg"});
   }
