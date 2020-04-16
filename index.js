@@ -12,6 +12,8 @@ const fnID = "547460828400451584";
 const qsID = "699819200725909527";
 //donaldinho-dev
 const ddID = "700028814402650262";
+//Dagger Dark Skin Tone Dancer
+const ddstdID = "131087538684166144";
 
 
 /***** USERS *****/
@@ -39,6 +41,10 @@ const PatID = "102828388909072384";
 const KowpakID = "141019900993994753";
 //Urbane
 const UrbaneID = "257310330680639488";
+
+/***** SOUNDS *****/
+const moan1 = "/home/pi/discordbotrun/audio/moan.mp3";
+const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -93,7 +99,38 @@ client.on("message", async message => {
   }
 */
 
+  // play a sound
+/*
+  if (message.author.id.toString() == KowpakID) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection => {
+      const dispatcher = connection.playFile(moan);
+      dispatcher.resume();
+      dispatcher.on("end", () => {channel.leave()});
+    });
+  }
+*/
+
 /***** current shenanigans *****/
+
+  if ((message.author.id.toString() == PatID) || (message.author.id.toString() == MAXID)) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection => {
+      const dispatcher = connection.playFile(moan);
+      dispatcher.resume();
+      dispatcher.on("end", () => {channel.leave()});
+    });
+  }
+
+  if ((message.author.id.toString() == KowpakID) && message.content.includes('>')) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection => {
+      const dispatcher = connection.playFile(moan);
+      dispatcher.resume();
+      dispatcher.on("end", () => {channel.leave()});
+    });
+  }
+
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
   }
@@ -166,10 +203,11 @@ client.on("message", async message => {
 		message.reply('grill up bitches!!');
 	  }
   }
-if (message.author.id.toString() === BryanID) {
+  if (message.author.id.toString() === BryanID) {
     message.channel.send("Hey Boo Bear");
   }
-if (message.author.id.toString() === BryanID) {
+
+  if (message.author.id.toString() === BryanID) {
     message.channel.send("Fish Scott! Entertain Me!");
   }
 
