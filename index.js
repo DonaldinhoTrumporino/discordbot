@@ -167,9 +167,6 @@ client.on("message", async message => {
 	  }
   }
 	
-  if(message.author.id.toString() == BryanID) {
-    message.channel.send('Hello Boo Bear');
-  }
 
 /***************************************** do not edit below this line ***************************************************/
   
