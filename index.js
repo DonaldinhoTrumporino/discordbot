@@ -62,7 +62,7 @@ const UrbaneID = "257310330680639488";
 
 /***** SOUNDS *****/
 const moan1 = "/home/pi/discordbotrun/audio/moan.mp3";
-const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";\
+const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";
 
 /********************************************** start code **********************************************/
 
