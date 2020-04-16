@@ -41,19 +41,19 @@ client.on("ready", () => {
   console.log(`Update successful!`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setActivity(`CNN`);
+  client.user.setActivity(`Fox News`);
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`CNN`);
+  client.user.setActivity(`Fox News`);
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`CNN`);
+  client.user.setActivity(`Fox News`);
 });
 
 client.on("message", async message => {
@@ -66,7 +66,7 @@ client.on("message", async message => {
   
 	
   if (message.content.includes('furry')) {
-    message.channel.send('Travis is a faggot);
+    message.channel.send('Travis is a faggot');
   }
 
   if (message.content.includes('travis')) {
