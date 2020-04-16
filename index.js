@@ -15,6 +15,24 @@ const ddID = "700028814402650262";
 //Dagger Dark Skin Tone Dancer
 const ddstdID = "131087538684166144";
 
+/***** ROLES *****/
+//blue (crusader)
+const blueID = "628743541262123032";
+//red (bootlicker)
+const redID = "628743489546616833"'
+//purple (ephebophile)
+const purpleID = "699805934490353715";
+//yellow (sovereigncitizen)
+const yellowID = "699806248228356146";
+//green (furry)
+const greenID = "699806549866053722";
+//grill (centrist)
+const grillID = "699808750005125160";
+//black (unflaired)
+const blackID = "699829579333763073";
+//everyone
+const everyoneID = "131087537165959168";
+
 
 /***** USERS *****/
 //Howard
@@ -44,7 +62,9 @@ const UrbaneID = "257310330680639488";
 
 /***** SOUNDS *****/
 const moan1 = "/home/pi/discordbotrun/audio/moan.mp3";
-const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";
+const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";\
+
+/********************************************** start code **********************************************/
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -116,13 +136,13 @@ client.on("message", async message => {
   if ((message.author.id.toString() == PatID) || (message.author.id.toString() == MaxID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan1);
+      const dispatcher = connection.playFile(moan2);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
   }
 
-  if ((message.author.id.toString() == KowpakID) && message.content.includes('>')) {
+  if ((message.author.id.toString() == KowpakID) && message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(moan1);
