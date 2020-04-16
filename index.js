@@ -85,7 +85,7 @@ client.on("message", async message => {
   }
 
   // message a user
-  if (message.author.id.toString() === KowpakID {
+  if (message.author.id.toString() === KowpakIDi) {
     message.channel.send("This is a test");
   }
   
