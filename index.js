@@ -133,7 +133,9 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 
-  if ((message.author.id.toString() == PatID) || (message.author.id.toString() == MaxID)) {
+  if ((message.author.id.toString() == PatID) || 
+      (message.author.id.toString() == MaxID) ||
+      (message.author.id.toString() == HowardID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(moan2);
@@ -142,7 +144,8 @@ client.on("message", async message => {
     });
   }
 
-  if ((message.author.id.toString() == KowpakID) && message.content.includes('moan')) {
+  if ((message.author.id.toString() == KowpakID) &&
+      message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(moan1);
@@ -175,11 +178,17 @@ client.on("message", async message => {
     message.channel.send("", {file: "https://i.4cdn.org/gif/1586742606555.webm"});
   }
   
-  if (message.content.includes('trump') || message.content.includes('Trump') || message.content.includes('donald') || message.content.includes('Donald')) {
+  if (message.content.includes('trump') || 
+      message.content.includes('Trump') || 
+      message.content.includes('donald') || 
+      message.content.includes('Donald')) {
     message.channel.send("", {file: "https://i.imgur.com/MSotV1j.jpg"});
   }
 
-  if (message.content.includes('age') || message.content.includes('attractive') || message.content.includes('Max') || message.content.includes('max')) {
+  if (message.content.includes('age') || 
+      message.content.includes('attractive') || 
+      message.content.includes('Max') || 
+      message.content.includes('max')) {
     message.channel.send("", {file: "https://i.imgur.com/LCKw4bf.png"});
   }
   
@@ -191,7 +200,9 @@ client.on("message", async message => {
     message.channel.send('https://www.politicalcompass.org/');
   }
 	
-  if (((message.author.id.toString() == HowardID) || (message.author.id.toString() == MaxID) || (message.author.id.toString() == KowpakID)) && message.content.includes('>')) {
+  if (((message.author.id.toString() == HowardID) || 
+       (message.author.id.toString() == MaxID) || 
+       (message.author.id.toString() == KowpakID)) && message.content.includes('>')) {
 	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 	
