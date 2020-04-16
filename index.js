@@ -66,7 +66,7 @@ client.on("message", async message => {
   
 	
   if (message.content.includes('furry')) {
-    message.channel.send('Travis is a faggot);
+    message.channel.send('Travis is a faggot');
   }
 
   if (message.content.includes('travis')) {
