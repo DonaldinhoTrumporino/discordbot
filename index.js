@@ -19,7 +19,7 @@ const ddstdID = "131087538684166144";
 //blue (crusader)
 const blueID = "628743541262123032";
 //red (bootlicker)
-const redID = "628743489546616833"'
+const redID = "628743489546616833";
 //purple (ephebophile)
 const purpleID = "699805934490353715";
 //yellow (sovereigncitizen)
