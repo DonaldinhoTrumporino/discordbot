@@ -167,6 +167,10 @@ client.on("message", async message => {
 	  }
   }
 
+  if(message.author.id.toString() == BryanID) {
+    message.channel.send("hey BooBear");
+  }
+
 /***************************************** do not edit below this line ***************************************************/
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
