@@ -104,7 +104,7 @@ client.on("message", async message => {
   if (message.author.id.toString() == KowpakID) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan);
+      const dispatcher = connection.playFile(moan1);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
@@ -116,7 +116,7 @@ client.on("message", async message => {
   if ((message.author.id.toString() == PatID) || (message.author.id.toString() == MaxID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan);
+      const dispatcher = connection.playFile(moan1);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
@@ -125,7 +125,7 @@ client.on("message", async message => {
   if ((message.author.id.toString() == KowpakID) && message.content.includes('>')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan);
+      const dispatcher = connection.playFile(moan1);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
