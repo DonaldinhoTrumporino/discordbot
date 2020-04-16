@@ -80,15 +80,19 @@ client.on("message", async message => {
   
 /***** templates (do not uncomment, only copy and paste) *****/
   // message a channel
+/*
   if (message.channel.id.toString() === sfID) {
     message.channel.send("This is a test");
   }
+*/
 
   // message a user
-  if (message.author.id.toString() === KowpakIDi) {
+/*
+  if (message.author.id.toString() === KowpakID) {
     message.channel.send("This is a test");
   }
-  
+*/
+
 /***** current shenanigans *****/
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
@@ -163,7 +167,7 @@ client.on("message", async message => {
 	  }
   }
 
-/***************************************** do not edit above this line ***************************************************/
+/***************************************** do not edit below this line ***************************************************/
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
