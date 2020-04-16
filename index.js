@@ -78,8 +78,18 @@ client.on("message", async message => {
 /***************************************** do not edit above this line ***************************************************/
 /******************************************* add your functions here *****************************************************/
   
-  //message a channel
-	
+/***** templates (do not uncomment, only copy and paste) *****/
+  // message a channel
+  if (message.channel.id.toString() === sfID) {
+    message.channel.send("This is a test");
+  }
+
+  // message a user
+  if (message.author.id.toString() === KowpakID {
+    message.channel.send("This is a test");
+  }
+  
+/***** current shenanigans *****/
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
   }
