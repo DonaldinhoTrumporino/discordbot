@@ -166,7 +166,9 @@ client.on("message", async message => {
 		message.reply('grill up bitches!!');
 	  }
   }
-	
+if (message.author.id.toString() === BryanID) {
+    message.channel.send("Hey Boo Bear");
+  }	
 
 /***************************************** do not edit below this line ***************************************************/
   
