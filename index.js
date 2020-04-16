@@ -1,6 +1,20 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
 
+/***** CHANNELS *****/
+//shreks-fungeon
+const sfID = "399718595724181513";
+//the-deep-state
+const tdsID = "131087537165959168";
+//fake-news
+const fnID = "547460828400451584";
+//quad-squad
+const qsID = "699819200725909527";
+//donaldinho-dev
+const ddID = "700028814402650262";
+
+
+/***** USERS *****/
 //Howard
 const HowardID = "131237025251721216";
 //Adam
@@ -64,6 +78,7 @@ client.on("message", async message => {
 /***************************************** do not edit above this line ***************************************************/
 /******************************************* add your functions here *****************************************************/
   
+  //message a channel
 	
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
