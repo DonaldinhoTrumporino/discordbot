@@ -151,7 +151,7 @@ client.on("message", async message => {
       message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(trump1);
+      const dispatcher = connection.playFile(trump2);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
