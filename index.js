@@ -61,8 +61,7 @@ const KowpakID = "141019900993994753";
 const UrbaneID = "257310330680639488";
 
 /***** SOUNDS *****/
-//china
-//const trump1 = "https://www.myinstants.com/media/sounds/china_pH6AIw0.mp3";
+// china
 const trump1 = "https://soundfrancisco.com/wp-content/uploads/2019/09/ibeatchina.mp3";
 // horror of nuclear
 const trump2 = "https://www.soundboard.com/sb/sound/956252";
