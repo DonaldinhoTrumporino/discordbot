@@ -281,7 +281,7 @@ client.on("message", async message => {
   */
   // centrist
 
-  if(message.member.roles.get(grillID)){
+  if (message.member.roles.get(grillID)){
 	  if(!message.author.bot){
 		message.reply('grill up bitches!!');
 	  }
@@ -306,6 +306,11 @@ client.on("message", async message => {
   if (message.author.id.toString() === KowpakID && message.content.includes('www')) {
     message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
   }
+
+  if ((message.author.id.toString() === HowardID || message.author.id.toString() === MaxID) && message.content.includes('every')) {
+	message.channel.send("", {file: "https://i.kym-cdn.com/photos/images/original/000/528/302/85e.png"});	  
+  }
+	  
 
 /***************************************** do not edit below this line ***************************************************/
   
