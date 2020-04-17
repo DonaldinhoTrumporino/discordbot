@@ -287,7 +287,7 @@ client.on("message", async message => {
 	  }
   }
 
-  if (message.author.id.toString() === BryanID) {
+  if (message.author.id.toString() === BryanID && message.content.includes ('4chan')) {
     message.channel.send("Hey Boo Bear");
   }
 
