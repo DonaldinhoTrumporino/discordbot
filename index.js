@@ -184,7 +184,7 @@ client.on("message", async message => {
       });
   }
 
-*/
+
   // react with an emoji
 
   if ((message.author.id.toString() == KowpakID)) {
@@ -192,7 +192,7 @@ client.on("message", async message => {
     message.react(emoji);
   }
 
-
+*/
 
 /***** current shenanigans *****/
 
@@ -231,6 +231,36 @@ client.on("message", async message => {
             dispatcher.on('finish', () => {channel.leave()});
           });
       });
+  }
+
+  if ((message.author.id.toString() == PatID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theP");
+    message.react(emoji);
+  }
+
+  if ((message.author.id.toString() == MaxID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theG");
+    message.react(emoji);
+  }
+
+  if ((message.author.id.toString() == HowardID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theH");
+    message.react(emoji);
+  }
+
+  if ((message.author.id.toString() == BryanID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theScott");
+    message.react(emoji);
+  }
+
+  if ((message.author.id.toString() == ListiID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theL");
+    message.react(emoji);
+  }
+
+  if ((message.author.id.toString() == WillID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theW");
+    message.react(emoji);
   }
 
   if (message.content.includes('travis')) {
