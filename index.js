@@ -188,7 +188,7 @@ client.on("message", async message => {
   // react with an emoji
 
   if ((message.author.id.toString() == KowpakID)) {
-    //const emoji = client.emojis.cache.find(emoji => emoji.name === "mike");
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "mike");
     message.react(emoji);
   }
 
