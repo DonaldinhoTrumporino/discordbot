@@ -136,8 +136,7 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 
-  if ((message.author.id.toString() == PatID) || 
-      (message.author.id.toString() == MaxID) ||
+  if ((message.author.id.toString() == PatID) ||
       (message.author.id.toString() == HowardID) ||
       (message.author.id.toString() == BryanID)) {
     const channel = client.channels.get(ddstdID);
