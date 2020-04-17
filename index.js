@@ -69,6 +69,9 @@ const trump3 = "/home/pi/discordbotrun/audio/trump3.mp3";
 const trump4 = "/home/pi/discordbotrun/audio/rump4.mp4";
 
 /********************************************** start code **********************************************/
+const sleep = (ms) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -146,7 +149,7 @@ client.on("message", async message => {
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump4);
       dispatcher.resume();
-      dispatcher.on("end", () => {sleep(1);channel.leave()});
+      dispatcher.on("end", () => {sleep(1).then(() +> {channel.leave()})});
     });
   }
 
