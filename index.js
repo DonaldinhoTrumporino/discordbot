@@ -253,6 +253,10 @@ client.on("message", async message => {
   if (message.author.id.toString() === MaxID) {
     message.channel.send("Fake News!");
   }
+  
+  if (message.author.id.toString() === HowardID) {
+    message.channel.send("That was probably the most liberal leaning bs I have ever read.");
+  }
 
 /***************************************** do not edit below this line ***************************************************/
   
