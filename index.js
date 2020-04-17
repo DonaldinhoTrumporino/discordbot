@@ -147,9 +147,8 @@ client.on("message", async message => {
     });
   }
 
-  if ((message.author.id.toString() == KowpakID &&
-      message.content.includes('moan')) ||
-      message.author.id.toString() == MaxID) {
+  if (message.author.id.toString() == KowpakID &&
+      message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump1);
