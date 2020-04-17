@@ -138,7 +138,8 @@ client.on("message", async message => {
 
   if ((message.author.id.toString() == PatID) || 
       (message.author.id.toString() == MaxID) ||
-      (message.author.id.toString() == HowardID)) {
+      (message.author.id.toString() == HowardID) ||
+      (message.author.id.toString() == BryanID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(moan2);
