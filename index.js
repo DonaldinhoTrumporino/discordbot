@@ -152,7 +152,7 @@ client.on("message", async message => {
       message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(trump1);
+      const dispatcher = connection.playFile(moan1);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
@@ -212,28 +212,28 @@ client.on("message", async message => {
 	
   /*  
   // libleft
-  if(message.member.roles.equals("699806549866053722")){
+  if(message.member.roles.equals(greenID)){
 	  message.channel.send('disgusting libleft');
   }
   // authright
-  if(message.member.roles.get("628743541262123032")){
+  if(message.member.roles.get(blueID)){
 	  message.channel.send('chosen children');
   }
   // authleft
-  if(message.member.roles.get("628743489546616833")){
+  if(message.member.roles.get(redID)){
 	  message.channel.send('fucking bootlicker');
   }
   // libright money
-  if(message.member.roles.get("699806248228356146")){
+  if(message.member.roles.get(yellowID)){
 	  message.channel.send('money is king');
   }
   // libright cp
-  if(message.member.roles.get("699805934490353715")){
+  if(message.member.roles.get(purpleID)){
 	  message.channel.send('CP');
   }
   */
   // centrist
-  if(message.member.roles.get("699808750005125160")){
+  if(message.member.roles.get(grillID)){
 	  if(!message.author.bot){
 		message.reply('grill up bitches!!');
 	  }
