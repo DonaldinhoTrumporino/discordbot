@@ -69,6 +69,8 @@ const trump2 = "https://www.soundboard.com/sb/sound/956252";
 const trump3 = "https://www.soundboard.com/sb/sound/956258";
 // rosie - fat ugly face
 const trump4 = "https://www.soundboard.com/sb/sound/9409";
+// mexico
+const trump5 = "https://soundfrancisco.com/wp-content/uploads/2019/09/mbeatmexico.mp3";
 // slaps
 const moan1 = "https://soundfishing.eu/download.php?id=962";
 const moan2 = "https://soundfishing.eu/download.php?id=953";
@@ -194,6 +196,18 @@ client.on("message", async message => {
         channel.join()
           .then(connection => {
             const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+	
+  if (message.content.includes('mexico') ||
+    message.content.includes('Mexico')) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump5);
             dispatcher.on('finish', () => {channel.leave()});
           });
       });
