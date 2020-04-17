@@ -187,7 +187,7 @@ client.on("message", async message => {
 */
 
   if (message.author.id.toString() == KowpakID &&
-      message.content.includes('moan')) {
+      message.content.includes('rant')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump1);
@@ -195,6 +195,17 @@ client.on("message", async message => {
       dispatcher.on("end", () => {channel.leave()});
     });
   }
+
+  if (message.author.id.toString() == KowpakID &&
+      message.content.includes('moan')) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection => {
+      const dispatcher = connection.playFile(moan2);
+      dispatcher.resume();
+      dispatcher.on("end", () => {channel.leave()});
+    });
+  }
+
 
   if (message.content.includes('furry')) {
     message.channel.send('Travis is a faggot');
