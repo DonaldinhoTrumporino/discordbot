@@ -1,7 +1,5 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
-const fs = require('fs');
-const prism = require('prism-media');
 
 /***** CHANNELS *****/
 //shreks-fungeon
@@ -63,17 +61,11 @@ const KowpakID = "141019900993994753";
 const UrbaneID = "257310330680639488";
 
 /***** SOUNDS *****/
-const moan1 = "/home/pi/discordbotrun/audio/moan.mp3";
-const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";
-const trump1 = "/home/pi/discordbotrun/audio/trump1.mp3";
-const trump2 = "/home/pi/discordbotrun/audio/trump2.mp3";
-const trump3 = "/home/pi/discordbotrun/audio/trump3.mp3";
-const trump4 = "/home/pi/discordbotrun/audio/rump4.mp4";
+//china
+const trump1 = "https://www.myinstants.com/media/sounds/china_pH6AIw0.mp3";
+const moan1 = "https://soundfishing.eu/download.php?id=962";
 
 /********************************************** start code **********************************************/
-const sleep = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -114,201 +106,201 @@ client.on("message", async message => {
 /******************************************* add your functions here *****************************************************/
   
 /***** templates (do not uncomment, only copy and paste) *****/
-  // message a channel
 /*
+
+// message a channel
+
   if (message.channel.id.toString() === sfID) {
     message.channel.send("This is a test");
   }
-*/
 
-  // message a user
-/*
+
+// message a user
+
   if (message.author.id.toString() === KowpakID) {
     message.channel.send("This is a test");
   }
-*/
 
-  // play a sound
-/*
-  if (message.author.id.toString() == KowpakID) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan1);
-      dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
-    });
+
+// message if a user belongs to a role
+
+  if (message.member.roles.cache.has(grillID)){
+    message.reply('grill up bitches!!');
   }
-*/
 
+// play a sound if a user messages
+
+  if (message.author.id.toString() == KowpakID) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+
+
+  // play a sound if a word is messaged
+
+  if (message.content.includes('china')) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+
+
+  // play a sound if a user messages a word
+
+  if ((message.content.includes('test')) &&
+    (message.author.id.toString() == KowpakID)) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+
+
+*/
 /***** current shenanigans *****/
 
-/*
-  if ((message.author.id.toString() == HowardID)) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan1);
-      dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
-    });
-  }
 
-  if ((message.author.id.toString() == KowpakID)) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection => {
-      const dispatcher = connection.playFile(trump1);
-      dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
-    });
-  }
-
-
-  if ((message.author.id.toString() == KowpakID)) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection =>{
-      const input = fs.createReadStream('./file.mp3');
-      const transcoder = new prism.FFmpeg({
-        args: [
-          '-analyzeduration', '0',
-          '-loglevel', '0',
-          '-f', 's161e',
-          '-ar', '48000',
-          '-ac', '2',
-        ],
+  if (message.content.includes('china')) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
       });
-      const opus = new prism.opus.Encoder({ rate:48000, channels: 2, frameSize: 960});
-      input
-        .pipe(transcoder)
-        .pipe(opus);
-
-      
-
-    });
-  }
-*/
-
-  if (message.content.includes('rant')) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection => {
-      const dispatcher = connection.playFile(trump1);
-      dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
-    });
   }
 
   if (message.content.includes('moan')) {
-    const channel = client.channels.get(ddstdID);
-    channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan2);
-      dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
-    });
-  }
-
-
-  if (message.content.includes('furry')) {
-    message.channel.send('Travis is a faggot');
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump1);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
   }
 
   if (message.content.includes('travis')) {
     message.channel.send('Travis is a furry!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   }
   
-  if (message.content.includes('tranny') || message.content.includes('trannie')) {
+  if (message.content.includes('trann') || message.content.includes('trans')) {
     message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
-  if (message.content.includes('nigga') || message.content.includes('nigger')) {
+  if (message.content.includes('nigga')) {
     message.channel.send("", {file: "https://i.imgur.com/CcsdIVX.jpeg"});
   }
 
-  if (message.content.includes('child porn') || message.content.includes('CHILD PORN')) {
-    message.channel.send('CHILD PORN!!!!!', {file: "https://i.imgur.com/LCKw4bf.png"}); return;
-  }
-
-  if (message.content.includes('porn') || message.content.includes('Porn')) {
-    message.channel.send("", {file: "https://i.4cdn.org/gif/1586742606555.webm"});
+  if (message.content.includes('porn') ||
+    message.content.includes('Porn')) {
+      message.channel.send("", {file: "https://i.4cdn.org/gif/1586742606555.webm"});
   }
   
   if (message.content.includes('trump') || 
-      message.content.includes('Trump') || 
-      message.content.includes('donald') || 
-      message.content.includes('Donald')) {
-    message.channel.send("", {file: "https://i.imgur.com/MSotV1j.jpg"});
+    message.content.includes('Trump') || 
+    message.content.includes('donald') || 
+    message.content.includes('Donald')) {
+      message.channel.send("", {file: "https://i.imgur.com/MSotV1j.jpg"});
   }
 
   if (message.content.includes('age') || 
-      message.content.includes('attractive') || 
-      message.content.includes('Max') || 
-      message.content.includes('max')) {
-    message.channel.send("", {file: "https://i.imgur.com/LCKw4bf.png"});
+    message.content.includes('attractive') || 
+    message.content.includes('Max') || 
+    message.content.includes('max')) {
+      message.channel.send("", {file: "https://i.imgur.com/LCKw4bf.png"});
   }
   
   if(message.content.includes('CP')) {
     message.channel.send('Max quit watching child porn');
   }
   
-  if(message.content.includes('compass') || message.content.includes('politic')) {
-    message.channel.send('https://www.politicalcompass.org/');
+  if(message.content.includes('compass') ||
+    message.content.includes('politic')) {
+      message.channel.send('https://www.politicalcompass.org/');
   }
 	
   if (((message.author.id.toString() == HowardID) || 
-       (message.author.id.toString() == MaxID) || 
-       (message.author.id.toString() == KowpakID)) && message.content.includes('>')) {
-	message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
+    (message.author.id.toString() == MaxID) || 
+    (message.author.id.toString() == KowpakID)) &&
+    message.content.includes('>')) {
+      message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});return;
   }
 	
   /*  
   // libleft
-  if(message.member.roles.equals(greenID)){
+  if(message.member.roles.cache.has(greenID)){
 	  message.channel.send('disgusting libleft');
   }
   // authright
-  if(message.member.roles.get(blueID)){
+  if(message.member.roles.cache.has(blueID)){
 	  message.channel.send('chosen children');
   }
   // authleft
-  if(message.member.roles.get(redID)){
+  if(message.member.roles.cache.has(redID)){
 	  message.channel.send('fucking bootlicker');
   }
   // libright money
-  if(message.member.roles.get(yellowID)){
+  if(message.member.roles.cache.has(yellowID)){
 	  message.channel.send('money is king');
   }
   // libright cp
-  if(message.member.roles.get(purpleID)){
+  if(message.member.roles.cache.has(purpleID)){
 	  message.channel.send('CP');
   }
   */
+
   // centrist
-
-  if (message.member.roles.get(grillID)){
-	  if(!message.author.bot){
-		message.reply('grill up bitches!!');
-	  }
+  if (message.member.roles.cache.has(grillID)){
+    message.reply('grill up bitches!!');
   }
 
-  if (message.author.id.toString() === BryanID && message.content.includes ('4chan')) {
-    message.channel.send("Hey Boo Bear");
+  if (message.author.id.toString() === BryanID &&
+    message.content.includes ('4chan')) {
+      message.channel.send("Hey Boo Bear");
   }
 
-  if (message.author.id.toString() === BryanID && message.content.includes('www')) {
-    message.channel.send("Fish Scott! Entertain Me!");
+  if (message.author.id.toString() === BryanID &&
+    message.content.includes('www')) {
+      message.channel.send("Fish Scott! Entertain Me!");
   }
   
-  if (message.author.id.toString() === MaxID && message.content.includes('www')) {
-    message.channel.send("Fake News!");
+  if (message.author.id.toString() === MaxID &&
+    message.content.includes('www')) {
+      message.channel.send("Fake News!");
   }
   
-  if (message.author.id.toString() === HowardID && message.content.includes('government')) {
-    message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
+  if (message.author.id.toString() === HowardID &&
+    message.content.includes('government')) {
+      message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
   }
 
-  if (message.author.id.toString() === KowpakID && message.content.includes('www')) {
-    message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
+  if (message.author.id.toString() === KowpakID &&
+    message.content.includes('www')) {
+      message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
   }
 
-  if ((message.author.id.toString() === HowardID || message.author.id.toString() === MaxID) && message.content.includes('every')) {
-	message.channel.send("", {file: "https://i.kym-cdn.com/photos/images/original/000/528/302/85e.png"});	  
+  if ((message.author.id.toString() === HowardID ||
+    message.author.id.toString() === MaxID)
+    && message.content.includes('every')) {
+      message.channel.send("", {file: "https://i.kym-cdn.com/photos/images/original/000/528/302/85e.png"});	  
   }
 	  
 
