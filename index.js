@@ -66,6 +66,7 @@ const moan2 = "/home/pi/discordbotrun/audio/moan2.mp3";
 const trump1 = "/home/pi/discordbotrun/audio/trump1.mp3";
 const trump2 = "/home/pi/discordbotrun/audio/trump2.mp3";
 const trump3 = "/home/pi/discordbotrun/audio/trump3.mp3";
+const trump4 = "/home/pi/discordbotrun/audio/rump4.mp4";
 
 /********************************************** start code **********************************************/
 
@@ -138,10 +139,11 @@ client.on("message", async message => {
 
   if ((message.author.id.toString() == PatID) ||
       (message.author.id.toString() == HowardID) ||
-      (message.author.id.toString() == BryanID)) {
+      (message.author.id.toString() == BryanID) ||
+      (message.author.id.toString() == MaxID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan2);
+      const dispatcher = connection.playFile(trump4);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
