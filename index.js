@@ -196,8 +196,7 @@ client.on("message", async message => {
     });
   }
 
-  if (message.author.id.toString() == KowpakID &&
-      message.content.includes('moan')) {
+  if (message.content.includes('moan')) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(moan2);
