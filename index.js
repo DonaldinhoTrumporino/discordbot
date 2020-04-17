@@ -265,6 +265,10 @@ client.on("message", async message => {
     message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
   }
 
+  if (message.author.id.toString() === KowpakID) {
+    message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
+  }
+
 /***************************************** do not edit below this line ***************************************************/
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
