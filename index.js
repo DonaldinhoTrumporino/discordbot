@@ -1,5 +1,7 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
+const fs = require('fs');
+const prism = require('prism-media');
 
 /***** CHANNELS *****/
 //shreks-fungeon
@@ -140,22 +142,48 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 
-  if ((message.author.id.toString() == PatID) ||
-      (message.author.id.toString() == HowardID) ||
-      (message.author.id.toString() == BryanID) ||
-      (message.author.id.toString() == MaxID) ||
-      (message.author.id.toString() == KowpakID)) {
+  if ((message.author.id.toString() == HowardID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(trump4);
+      const dispatcher = connection.playFile(moan1);
       dispatcher.resume();
-      dispatcher.on("end", () => {
-        sleep(1).then(() => {
-          channel.leave()
-        })
-      });
+      dispatcher.on("end", () => {channel.leave()});
     });
   }
+
+  if ((message.author.id.toString() == KowpakID)) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection => {
+      const dispatcher = connection.playFile(trump1);
+      dispatcher.resume();
+      dispatcher.on("end", () => {channel.leave()});
+    });
+  }
+
+/*
+  if ((message.author.id.toString() == KowpakID)) {
+    const channel = client.channels.get(ddstdID);
+    channel.join().then(connection =>{
+      const input = fs.createReadStream('./file.mp3');
+      const transcoder = new prism.FFmpeg({
+        args: [
+          '-analyzeduration', '0',
+          '-loglevel', '0',
+          '-f', 's161e',
+          '-ar', '48000',
+          '-ac', '2',
+        ],
+      });
+      const opus = new prism.opus.Encoder({ rate:48000, channels: 2, frameSize: 960});
+      input
+        .pipe(transcoder)
+        .pipe(opus);
+
+      
+
+    });
+  }
+*/
 
   if (message.author.id.toString() == KowpakID &&
       message.content.includes('moan')) {
