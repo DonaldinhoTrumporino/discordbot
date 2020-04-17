@@ -141,7 +141,7 @@ client.on("message", async message => {
       (message.author.id.toString() == HowardID) ||
       (message.author.id.toString() == BryanID) ||
       (message.author.id.toString() == MaxID) ||
-      (message.author.id.toString() == KowpakID))) {
+      (message.author.id.toString() == KowpakID)) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump4);
