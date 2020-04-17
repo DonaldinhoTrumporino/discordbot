@@ -200,6 +200,18 @@ client.on("message", async message => {
           });
       });
   }
+	
+  if (message.content.includes('mexico') ||
+    message.content.includes('Mexico')) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump5);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
 
   if (message.content.includes('moan') ||
     message.content.includes('MOAN')) {
