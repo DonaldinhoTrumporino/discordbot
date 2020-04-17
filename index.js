@@ -59,6 +59,8 @@ const PatID = "102828388909072384";
 const KowpakID = "141019900993994753";
 //Urbane
 const UrbaneID = "257310330680639488";
+//Travis
+const TravisID = "243112729655640074";
 
 /***** SOUNDS *****/
 // china
