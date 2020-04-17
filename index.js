@@ -140,7 +140,8 @@ client.on("message", async message => {
   if ((message.author.id.toString() == PatID) ||
       (message.author.id.toString() == HowardID) ||
       (message.author.id.toString() == BryanID) ||
-      (message.author.id.toString() == MaxID)) {
+      (message.author.id.toString() == MaxID) ||
+      (message.author.id.toString() == KowpakID))) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump4);
@@ -234,11 +235,13 @@ client.on("message", async message => {
   }
   */
   // centrist
+
   if(message.member.roles.get(grillID)){
 	  if(!message.author.bot){
 		message.reply('grill up bitches!!');
 	  }
   }
+
   if (message.author.id.toString() === BryanID) {
     message.channel.send("Hey Boo Bear");
   }
@@ -246,7 +249,8 @@ client.on("message", async message => {
   if (message.author.id.toString() === BryanID) {
     message.channel.send("Fish Scott! Entertain Me!");
   }
-	if (message.author.id.toString() === MaxID) {
+  
+  if (message.author.id.toString() === MaxID) {
     message.channel.send("Fake News!");
   }
 
