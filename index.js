@@ -372,7 +372,7 @@ client.on("message", async message => {
   */
 
   // centrist
-  if (message.member.roles.cache.has(grillID) && message.content.includes('i')){
+  if (message.member.roles.cache.has(grillID) && message.content.includes('my')){
     message.reply('grill up bitches!!');
 	message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
   }
