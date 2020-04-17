@@ -187,7 +187,8 @@ client.on("message", async message => {
 /***** current shenanigans *****/
 
 
-  if (message.content.includes('china')) {
+  if (message.content.includes('china') ||
+    message.content.includes('China')) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
@@ -198,7 +199,8 @@ client.on("message", async message => {
       });
   }
 
-  if (message.content.includes('moan')) {
+  if (message.content.includes('moan') ||
+    message.content.includes('MOAN')) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
