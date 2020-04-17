@@ -147,11 +147,12 @@ client.on("message", async message => {
     });
   }
 
-  if ((message.author.id.toString() == KowpakID) &&
-      message.content.includes('moan')) {
+  if ((message.author.id.toString() == KowpakID &&
+      message.content.includes('moan')) ||
+      message.author.id.toString() == MaxID) {
     const channel = client.channels.get(ddstdID);
     channel.join().then(connection => {
-      const dispatcher = connection.playFile(moan1);
+      const dispatcher = connection.playFile(trump1);
       dispatcher.resume();
       dispatcher.on("end", () => {channel.leave()});
     });
