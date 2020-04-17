@@ -146,7 +146,7 @@ client.on("message", async message => {
     channel.join().then(connection => {
       const dispatcher = connection.playFile(trump4);
       dispatcher.resume();
-      dispatcher.on("end", () => {channel.leave()});
+      dispatcher.on("end", () => {sleep(1);channel.leave()});
     });
   }
 
