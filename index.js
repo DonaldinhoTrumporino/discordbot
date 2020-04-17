@@ -66,9 +66,9 @@ const trump1 = "https://www.myinstants.com/media/sounds/china_pH6AIw0.mp3";
 // horror of nuclear
 const trump2 = "https://www.soundboard.com/sb/sound/956252";
 // believe me
-const trump2 = "https://www.soundboard.com/sb/sound/956258";
+const trump3 = "https://www.soundboard.com/sb/sound/956258";
 // rosie - fat ugly face
-const trump2 = "https://www.soundboard.com/sb/sound/9409";
+const trump4 = "https://www.soundboard.com/sb/sound/9409";
 // slaps
 const moan1 = "https://soundfishing.eu/download.php?id=962";
 const moan2 = "https://soundfishing.eu/download.php?id=953";
