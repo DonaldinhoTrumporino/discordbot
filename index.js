@@ -244,6 +244,9 @@ client.on("message", async message => {
   if (message.author.id.toString() === BryanID) {
     message.channel.send("Fish Scott! Entertain Me!");
   }
+	if (message.author.id.toString() === MaxID) {
+    message.channel.send("Fake News!");
+  }
 
 /***************************************** do not edit below this line ***************************************************/
   
