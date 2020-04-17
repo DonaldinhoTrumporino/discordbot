@@ -293,19 +293,19 @@ client.on("message", async message => {
     message.channel.send("Hey Boo Bear");
   }
 
-  if (message.author.id.toString() === BryanID) {
+  if (message.author.id.toString() === BryanID && message.content.includes('www')) {
     message.channel.send("Fish Scott! Entertain Me!");
   }
   
-  if (message.author.id.toString() === MaxID) {
+  if (message.author.id.toString() === MaxID && message.content.includes('www')) {
     message.channel.send("Fake News!");
   }
   
-  if (message.author.id.toString() === HowardID) {
+  if (message.author.id.toString() === HowardID && message.content.includes('government')) {
     message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
   }
 
-  if (message.author.id.toString() === KowpakID) {
+  if (message.author.id.toString() === KowpakID && message.content.includes('www')) {
     message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
   }
 
