@@ -261,7 +261,12 @@ client.on("message", async message => {
   }
 
   if ((message.author.id.toString() == WillID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theW");
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theWill");
+    message.react(emoji);
+  }
+	
+  if ((message.author.id.toString() == KowpakID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "mike");
     message.react(emoji);
   }
 
@@ -311,35 +316,6 @@ client.on("message", async message => {
     message.content.includes('>')) {
       message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});return;
   }
-	
-  /*  
-  // libleft
-  if(message.member.roles.cache.has(greenID)){
-	  message.channel.send('disgusting libleft');
-  }
-  // authright
-  if(message.member.roles.cache.has(blueID)){
-	  message.channel.send('chosen children');
-  }
-  // authleft
-  if(message.member.roles.cache.has(redID)){
-	  message.channel.send('fucking bootlicker');
-  }
-  // libright money
-  if(message.member.roles.cache.has(yellowID)){
-	  message.channel.send('money is king');
-  }
-  // libright cp
-  if(message.member.roles.cache.has(purpleID)){
-	  message.channel.send('CP');
-  }
-  */
-
-  // centrist
-  if (message.member.roles.cache.has(grillID) && message.content.includes('i')){
-    message.reply('grill up bitches!!');
-	message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
-  }
 
   if (message.author.id.toString() === BryanID &&
     message.content.includes ('4chan')) {
@@ -371,7 +347,35 @@ client.on("message", async message => {
     && message.content.includes('every')) {
       message.channel.send("", {file: "https://i.kym-cdn.com/photos/images/original/000/528/302/85e.png"});	  
   }
-	  
+
+  /*  
+  // libleft
+  if(message.member.roles.cache.has(greenID)){
+	  message.channel.send('disgusting libleft');
+  }
+  // authright
+  if(message.member.roles.cache.has(blueID)){
+	  message.channel.send('chosen children');
+  }
+  // authleft
+  if(message.member.roles.cache.has(redID)){
+	  message.channel.send('fucking bootlicker');
+  }
+  // libright money
+  if(message.member.roles.cache.has(yellowID)){
+	  message.channel.send('money is king');
+  }
+  // libright cp
+  if(message.member.roles.cache.has(purpleID)){
+	  message.channel.send('CP');
+  }
+  */
+
+  // centrist
+  if (message.member.roles.cache.has(grillID) && message.content.includes('i')){
+    message.reply('grill up bitches!!');
+	message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
+  }
 
 /***************************************** do not edit below this line ***************************************************/
   
