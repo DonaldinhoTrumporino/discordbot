@@ -255,7 +255,7 @@ client.on("message", async message => {
   }
   
   if (message.author.id.toString() === HowardID) {
-    message.channel.send("That was probably the most liberal leaning bs I have ever read.");
+    message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
   }
 
 /***************************************** do not edit below this line ***************************************************/
