@@ -191,7 +191,7 @@ client.on("message", async message => {
       .then(channel => {
         channel.join()
           .then(connection => {
-            const dispatcher = connection.play(trump1);
+            const dispatcher = connection.play(moan1);
             dispatcher.on('finish', () => {channel.leave()});
           });
       });
