@@ -184,8 +184,16 @@ client.on("message", async message => {
       });
   }
 
-
 */
+  // react with an emoji
+
+  if ((message.author.id.toString() == KowpakID)) {
+    const emoji = client.emojis.find(emoji => emoji.name === "mike");
+    message.react(emoji.id);
+  }
+
+
+
 /***** current shenanigans *****/
 
 
