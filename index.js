@@ -240,7 +240,7 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 // testing random functionality
-Random rand = new Random(); 
+random.int(min = 0, max = 100);
 	
 if (message.author.id.toString() === PatID) {
 	int randOne = rand.nextInt(100);
