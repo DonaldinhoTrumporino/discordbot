@@ -522,7 +522,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   let newUserChannel = newState.channelID;
   let oldUserChannel = oldState.channelID;
 
-  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+  if(oldUserChannel === 'undefined' && newUserChannel !== 'undefined') {
     console.log(olduserChannel);
     console.log(newuserChannel);
     // User joins a voice channel
@@ -536,7 +536,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
       });
   }
 
-  else if(newUserChannel === undefined) {
+  else if(newUserChannel === 'undefined') {
     console.log("leave");
   }
 });
