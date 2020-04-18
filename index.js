@@ -1,8 +1,6 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
-
-// I don't know if this will actually load the utility, but here we go
-import java.util.Random;
+const random = require("random");
 
 /***** CHANNELS *****/
 //shreks-fungeon
@@ -518,7 +516,7 @@ if (message.author.id.toString() === PatID) {
   }
 });
 
-client.on("voiceStatusUpdate", (oldState, newState) => {
+client.on("voiceStateUpdate", (oldState, newState) => {
   console.log("test");
   // this event triggers when a user enters or leave the voice channel.
   let newUserChannel = newState.channel;
