@@ -242,7 +242,7 @@ client.on("message", async message => {
 // testing random functionality
 
   if (message.author.id.toString() === PatID) {
-    message.channel.send(Math.random());
+    if(math.Random() < .2) message.channel.send('yep');
   }
 
   if (message.content.includes('china') ||
