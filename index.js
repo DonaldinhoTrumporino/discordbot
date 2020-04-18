@@ -242,7 +242,7 @@ client.on("message", async message => {
 // testing random functionality
 
   if (message.author.id.toString() === PatID) {
-    if(Math.Random() < .2) 
+    if(Math.random() < .2) 
 	message.channel.send('yep');
   }
 
