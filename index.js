@@ -1,6 +1,9 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
 
+// I don't know if this will actually load the utility, but here we go
+import java.util.Random;
+
 /***** CHANNELS *****/
 //shreks-fungeon
 const sfID = "399718595724181513";
@@ -238,7 +241,13 @@ client.on("message", async message => {
 */
 
 /***** current shenanigans *****/
-
+// testing random functionality
+Random rand = new Random(); 
+	
+if (message.author.id.toString() === PatID) {
+	int randOne = rand.nextInt(100);
+	message.channel.send(randOne.toString());
+}
 
   if (message.content.includes('china') ||
     message.content.includes('China')) {
