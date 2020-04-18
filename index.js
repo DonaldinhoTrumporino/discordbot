@@ -518,7 +518,7 @@ client.on("message", async message => {
 });
 
 client.on("voiceStateUpdate", (oldState, newState) => {
-  if(oldState.member.id.toString === DonaldID) return;
+  if(oldState.member.id.toString() === DonaldID) return;
   // this event triggers when a user enters or leave the voice channel.
   const oldUserChannel = oldState.channelID;
   const newUserChannel = newState.channelID;
