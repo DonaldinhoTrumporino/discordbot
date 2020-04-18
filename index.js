@@ -275,7 +275,7 @@ client.on("message", async message => {
 
   if (message.content.includes('moan') ||
     message.content.includes('MOAN') ||
-    message.content.includes('Moan')) {
+    message.content.includes('Moan') && (Math.random() < TriggerFrequency)) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
@@ -287,7 +287,7 @@ client.on("message", async message => {
   }
 
   if (message.content.includes('rosie') ||
-    message.content.includes('Rosie')) {
+    message.content.includes('Rosie') && (Math.random() < TriggerFrequency)) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
