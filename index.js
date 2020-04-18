@@ -240,12 +240,11 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 // testing random functionality
-random.int(min = 0, max = 100);
 	
-if (message.author.id.toString() === PatID) {
-	int randOne = rand.nextInt(100);
-	message.channel.send(randOne.toString());
-}
+  if (message.author.id.toString() === PatID) {
+    const rand = random.normal();
+    message.channel.send(rand.toString());
+  }
 
   if (message.content.includes('china') ||
     message.content.includes('China')) {
