@@ -75,10 +75,15 @@ const trump4 = "https://www.soundboard.com/sb/sound/9409";
 const trump5 = "https://soundfrancisco.com/wp-content/uploads/2019/09/mbeatmexico.mp3";
 // slaps
 const moan1 = "https://soundfishing.eu/download.php?id=962";
+// generic
 const moan2 = "https://soundfishing.eu/download.php?id=953";
+// generic
 const moan3 = "https://soundfishing.eu/download.php?id=954";
+// generic
 const moan4 = "https://soundfishing.eu/download.php?id=955";
+// generic
 const moan5 = "https://soundfishing.eu/download.php?id=956";
+// generic
 const moan6 = "https://soundfishing.eu/download.php?id=958";
 
 /********************************************** start code **********************************************/
@@ -124,14 +129,14 @@ client.on("message", async message => {
 /***** templates (do not uncomment, only copy and paste) *****/
 /*
 
-// message a channel
+// message if a messages appears in a channel
 
   if (message.channel.id.toString() === sfID) {
     message.channel.send("This is a test");
   }
 
 
-// message a user
+// message if a user messages
 
   if (message.author.id.toString() === KowpakID) {
     message.channel.send("This is a test");
@@ -143,6 +148,15 @@ client.on("message", async message => {
   if (message.member.roles.cache.has(grillID)){
     message.reply('grill up bitches!!');
   }
+
+
+// message if a user messages a word
+
+  if ((message.author.id.toString() === KowpakID) &&
+    (message.content.includes('test')) {
+    message.channel.send("This is a test");
+  }
+
 
 // play a sound if a user messages
 
@@ -198,6 +212,9 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 
+  if ((message.author.id.toString() == KowpakID)) {
+    message.channel.send("<@" + KowpakID + ">" + "this is a test");
+  }
 
   if (message.content.includes('china') ||
     message.content.includes('China')) {
@@ -224,7 +241,8 @@ client.on("message", async message => {
   }
 
   if (message.content.includes('moan') ||
-    message.content.includes('MOAN')) {
+    message.content.includes('MOAN') ||
+    message.content.includes('Moan')) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
@@ -235,38 +253,30 @@ client.on("message", async message => {
       });
   }
 
-  if ((message.author.id.toString() == PatID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theP");
+  if (message.content.includes('rosie') ||
+    message.content.includes('Rosie')) {
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(trump4);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+
+  if ((message.author.id.toString() == TravisID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theW");
     message.react(emoji);
   }
 
-  if ((message.author.id.toString() == MaxID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theG");
+  if ((message.author.id.toString() == DickensID)) {
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "theD");
     message.react(emoji);
   }
 
   if ((message.author.id.toString() == HowardID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theH");
-    message.react(emoji);
-  }
-
-  if ((message.author.id.toString() == BryanID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theScott");
-    message.react(emoji);
-  }
-
-  if ((message.author.id.toString() == ListiID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theL");
-    message.react(emoji);
-  }
-
-  if ((message.author.id.toString() == WillID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theWill");
-    message.react(emoji);
-  }
-	
-  if ((message.author.id.toString() == KowpakID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "mike");
+    const emoji = client.emojis.cache.find(emoji => emoji.name === "authleft");
     message.react(emoji);
   }
 
@@ -476,6 +486,28 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
+});
+
+client.on("voiceStatusUpdate", (oldMember, newMember) => {
+  // this event triggers when a user enters or leave the voice channel.
+  let newUserChannel = newMember.voiceChannel;
+  let oldUserChannel = oldMember.voiceChannel;
+
+  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+    // User joins a voice channel
+    const channel = client.channels.fetch(ddstdID)
+      .then(channel => {
+        channel.join()
+          .then(connection => {
+            const dispatcher = connection.play(moan2);
+            dispatcher.on('finish', () => {channel.leave()});
+          });
+      });
+  }
+
+  /*else if(newUserChannel === undefined) {
+    // User leaves a voice channel
+  }*/
 });
 
 client.login(config.token);
