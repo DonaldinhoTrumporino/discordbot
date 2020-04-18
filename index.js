@@ -240,6 +240,7 @@ client.on("message", async message => {
 
 /***** current shenanigans *****/
 // testing random functionality
+console.log(Math.random())
 	
   if (message.author.id.toString() === PatID) {
     const rand = random.normal();
