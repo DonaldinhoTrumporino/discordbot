@@ -146,7 +146,7 @@ client.on("message", async message => {
 // message if a user belongs to a role
 
   if (message.member.roles.cache.has(grillID)){
-    message.reply('grill up bitches!!');
+     message.channel.send('grill up bitches!!');
   }
 
 
@@ -155,6 +155,13 @@ client.on("message", async message => {
   if ((message.author.id.toString() === KowpakID) &&
     (message.content.includes('test')) {
     message.channel.send("This is a test");
+  }
+
+
+// message a file if a user messages
+
+  if (message.author.id.toString() == HowardID) {
+      message.channel.send("this is a test", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 
 
@@ -172,7 +179,7 @@ client.on("message", async message => {
   }
 
 
-  // play a sound if a word is messaged
+// play a sound if a word is messaged
 
   if (message.content.includes('china')) {
     const channel = client.channels.fetch(ddstdID)
@@ -186,7 +193,7 @@ client.on("message", async message => {
   }
 
 
-  // play a sound if a user messages a word
+// play a sound if a user messages a word
 
   if ((message.content.includes('test')) &&
     (message.author.id.toString() == KowpakID)) {
@@ -201,20 +208,37 @@ client.on("message", async message => {
   }
 
 
-  // react with an emoji
+// react with an emoji
 
   if ((message.author.id.toString() == KowpakID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "mike");
-    message.react(emoji);
+    message.react(client.emojis.cache.find(emoji => emoji.name === "mike"));
+  }
+
+
+// tag a user when a user messages
+
+  if ((message.author.id.toString() == KowpakID)) {
+    message.channel.send("<@" + PatID + "> " + "this is a test");
+  }
+
+
+// tag user when THAT user messages
+
+  if (message.member.roles.cache.has(grillID) && message.content.includes('my')){
+    message.reply('grill up bitches!!');
+  }
+
+
+// tag a user when a word is messaged
+
+  if (message.content.includes('test')) {
+    message.channel.send("<@" + KowpakID + "> " + "this is a test");
   }
 
 */
 
 /***** current shenanigans *****/
 
-  if ((message.author.id.toString() == KowpakID)) {
-    message.channel.send("<@" + KowpakID + ">" + "this is a test");
-  }
 
   if (message.content.includes('china') ||
     message.content.includes('China')) {
@@ -266,18 +290,15 @@ client.on("message", async message => {
   }
 
   if ((message.author.id.toString() == TravisID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theW");
-    message.react(emoji);
+    message.react(client.emojis.cache.find(emoji => emoji.name === "theW"));
   }
 
   if ((message.author.id.toString() == DickensID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "theD");
-    message.react(emoji);
+    message.react(client.emojis.cache.find(emoji => emoji.name === "theD"));
   }
 
   if ((message.author.id.toString() == HowardID)) {
-    const emoji = client.emojis.cache.find(emoji => emoji.name === "authleft");
-    message.react(emoji);
+    message.react(client.emojis.cache.find(emoji => emoji.name === "authleft"));
   }
 
   if (message.content.includes('travis')) {
@@ -324,7 +345,7 @@ client.on("message", async message => {
     (message.author.id.toString() == MaxID) || 
     (message.author.id.toString() == KowpakID)) &&
     message.content.includes('>')) {
-      message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});return;
+      message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 
   if (message.author.id.toString() === BryanID &&
@@ -384,7 +405,7 @@ client.on("message", async message => {
   // centrist
   if (message.member.roles.cache.has(grillID) && message.content.includes('my')){
     message.reply('grill up bitches!!');
-	message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
+    message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
   }
 
 /***************************************** do not edit below this line ***************************************************/
@@ -494,6 +515,7 @@ client.on("voiceStatusUpdate", (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel;
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
+    console.log("test");
     // User joins a voice channel
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
