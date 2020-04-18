@@ -242,7 +242,8 @@ client.on("message", async message => {
 // testing random functionality
 
   if (message.author.id.toString() === PatID) {
-    if(math.Random() < .2) message.channel.send('yep');
+    if(Math.Random() < .2) 
+	message.channel.send('yep');
   }
 
   if (message.content.includes('china') ||
