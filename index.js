@@ -87,6 +87,7 @@ const moan5 = "https://soundfishing.eu/download.php?id=956";
 // generic
 const moan6 = "https://soundfishing.eu/download.php?id=958";
 
+const TriggerFrequency = .2;
 /********************************************** start code **********************************************/
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
@@ -243,7 +244,7 @@ client.on("message", async message => {
 
   if (message.author.id.toString() === PatID) {
     if(Math.random() < .2) 
-	message.channel.send('yep');
+	message.channel.send('And then theres my good friend Pat whos been a bigly help to us for a long time');
   }
 
   if (message.content.includes('china') ||
@@ -295,32 +296,32 @@ client.on("message", async message => {
       });
   }
 
-  if ((message.author.id.toString() == TravisID)) {
+  if ((message.author.id.toString() == TravisID) && (Math.random() < TriggerFrequency)) {
     message.react(client.emojis.cache.find(emoji => emoji.name === "theW"));
   }
 
-  if ((message.author.id.toString() == DickensID)) {
+  if ((message.author.id.toString() == DickensID) && (Math.random() < TriggerFrequency)) {
     message.react(client.emojis.cache.find(emoji => emoji.name === "theD"));
   }
 
-  if ((message.author.id.toString() == HowardID)) {
+  if ((message.author.id.toString() == HowardID) && (Math.random() < TriggerFrequency)) {
     message.react(client.emojis.cache.find(emoji => emoji.name === "authleft"));
   }
 
-  if (message.content.includes('travis')) {
+  if (message.content.includes('travis') && (Math.random() < TriggerFrequency)) {
     message.channel.send('Travis is a furry!!!');
   }
   
-  if (message.content.includes('trann') || message.content.includes('trans')) {
+  if (message.content.includes('trann') || message.content.includes('trans') && ) {
     message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
-  if (message.content.includes('nigga')) {
+  if (message.content.includes('nigga') && (Math.random() < TriggerFrequency)) {
     message.channel.send("", {file: "https://i.imgur.com/CcsdIVX.jpeg"});
   }
 
   if (message.content.includes('porn') ||
-    message.content.includes('Porn')) {
+    message.content.includes('Porn') && (Math.random() < TriggerFrequency)) {
       message.channel.send("", {file: "https://i.4cdn.org/gif/1586742606555.webm"});
   }
   
@@ -354,8 +355,7 @@ client.on("message", async message => {
       message.channel.send("", {file: "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg"});
   }
 
-  if (message.author.id.toString() === BryanID &&
-    message.content.includes ('4chan')) {
+  if (message.author.id.toString() === BryanID && (Math.random() < TriggerFrequency)) {
       message.channel.send("Hey Boo Bear");
   }
 
@@ -371,12 +371,12 @@ client.on("message", async message => {
   
   if (message.author.id.toString() === HowardID &&
     message.content.includes('government')) {
-      message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot");
+      message.channel.send("That was probably the most liberal leaning bs I have ever read. Fucking boot.");
   }
 
   if (message.author.id.toString() === KowpakID &&
     message.content.includes('www')) {
-      message.channel.send("Never forget when Kowpak made Stephanie Matonic cry. That was Ah-mazing.");
+      message.channel.send("gUyS a BoT wIlL bE sUpEr cOol!11!");
   }
 
   if ((message.author.id.toString() === HowardID ||
@@ -409,7 +409,7 @@ client.on("message", async message => {
   */
 
   // centrist
-  if (message.member.roles.cache.has(grillID) && message.content.includes('my')){
+  if (message.member.roles.cache.has(grillID) && (Math.random() < TriggerFrequency)){
     message.reply('grill up bitches!!');
     message.channel.send("", {file: "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif"});
   }
@@ -522,8 +522,9 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   let newUserChannel = newState.channelID;
   let oldUserChannel = oldState.channelID;
 
-  if(oldUserChannel === 'undefined') {
-    console.log("join");
+  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+    console.log(olduserChannel);
+    console.log(newuserChannel);
     // User joins a voice channel
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
@@ -535,7 +536,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
       });
   }
 
-  else if(newUserChannel === 'undefined') {
+  else if(newUserChannel === undefined) {
     console.log("leave");
   }
 });
