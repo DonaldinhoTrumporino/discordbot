@@ -521,6 +521,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   let oldUserChannel = oldState.channel;
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
+    console.log("join");
     // User joins a voice channel
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
@@ -532,9 +533,9 @@ client.on("voiceStateUpdate", (oldState, newState) => {
       });
   }
 
-  /*else if(newUserChannel === undefined) {
-    // User leaves a voice channel
-  }*/
+  else if(newUserChannel === undefined) {
+    console.log("leave");
+  }
 });
 
 client.login(config.token);
