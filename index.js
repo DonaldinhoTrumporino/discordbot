@@ -509,13 +509,13 @@ client.on("message", async message => {
   }
 });
 
-client.on("voiceStatusUpdate", (oldMember, newMember) => {
+client.on("voiceStatusUpdate", (oldState, newState) => {
+  console.log("test");
   // this event triggers when a user enters or leave the voice channel.
-  let newUserChannel = newMember.voiceChannel;
-  let oldUserChannel = oldMember.voiceChannel;
+  let newUserChannel = newState.channel;
+  let oldUserChannel = oldState.channel;
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    console.log("test");
     // User joins a voice channel
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
