@@ -312,7 +312,7 @@ client.on("message", async message => {
     message.channel.send('Travis is a furry!!!');
   }
   
-  if (message.content.includes('trann') || message.content.includes('trans') && ) {
+  if (message.content.includes('trann') || message.content.includes('trans')) {
     message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
   }
   
