@@ -516,28 +516,25 @@ client.on("message", async message => {
 });
 
 client.on("voiceStateUpdate", (oldState, newState) => {
-  console.log(oldState.channelID);
-  console.log(newState.channelID);
   // this event triggers when a user enters or leave the voice channel.
   let newUserChannel = newState.channelID;
   let oldUserChannel = oldState.channelID;
 
   if(oldUserChannel === undefined) {
-    console.log("join");
     // User joins a voice channel
-    const channel = client.channels.fetch(ddstdID)
+    const channel = client.channels.fetch(newUserChannel)
       .then(channel => {
         channel.join()
           .then(connection => {
-            const dispatcher = connection.play(moan2);
+            const dispatcher = connection.play(moan3);
             dispatcher.on('finish', () => {channel.leave()});
           });
       });
   }
 
-  else if(newUserChannel === undefined) {
+  /*else if(newUserChannel === undefined) {
     console.log("leave");
-  }
+  }*/
 });
 
 client.login(config.token);
