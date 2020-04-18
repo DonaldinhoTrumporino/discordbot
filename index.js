@@ -517,8 +517,11 @@ client.on("message", async message => {
 
 client.on("voiceStateUpdate", (oldState, newState) => {
   // this event triggers when a user enters or leave the voice channel.
-  let newUserChannel = newState.channelID;
-  let oldUserChannel = oldState.channelID;
+  const oldUserChannel = oldState.channelID;
+  const newUserChannel = newState.channelID;
+
+  console.log(oldUserChannel);
+  console.log(newUserChannel);
 
   if(oldUserChannel === undefined) {
     // User joins a voice channel
