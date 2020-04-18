@@ -36,6 +36,8 @@ const everyoneID = "131087537165959168";
 
 
 /***** USERS *****/
+//Donaldinho Trumporino
+const DonaldID = "699813891982622720";
 //Howard
 const HowardID = "131237025251721216";
 //Adam
@@ -516,6 +518,7 @@ client.on("message", async message => {
 });
 
 client.on("voiceStateUpdate", (oldState, newState) => {
+  if(message.member.id.toString === DonaldID) return;
   // this event triggers when a user enters or leave the voice channel.
   const oldUserChannel = oldState.channelID;
   const newUserChannel = newState.channelID;
