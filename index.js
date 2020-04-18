@@ -523,11 +523,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   const oldUserChannel = oldState.channelID;
   const newUserChannel = newState.channelID;
 
-  console.log("old: " + oldUserChannel + ", id: " + oldState.member.id);
-  console.log("new: " + newUserChannel + ", id: " + newState.member.id);
-
   if(oldUserChannel === undefined) {
-    console.log(oldState.member.id + " joined");
     // User joins a voice channel
     const channel = client.channels.fetch(newUserChannel)
       .then(channel => {
