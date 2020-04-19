@@ -315,16 +315,17 @@ client.on("message", async message => {
     message.reply("I don’t know what copypasta means - I don’t know what doxxed yourself means - does not knowing these definitions make me a dumbass moron? What’s your address and I’ll come show you what a real SOF guy is capable of - you threaten my life you little stolen valor fuck brick? Navy SEAL give me a goddamn break you fucking retard - if you grow a set and decide you wanna tie asses with me just come knock on my door - I didn’t do a fucking thing to you people but share a video of my waifu - period - if you wanna threaten my life over that be prepared for the consequences - I’m not on here looking for trouble if I was then why would I post a video of a cat on this channel? God almighty and I only posted it here because my woman told me to - I’d never heard of this channel - had I known making a cute pun including the cats name would yield such backlash from faggot ass frenchy stolen valor pukes and broke dick hadji wan kenobis id have just not posted it - I thought the members of this sub would enjoy this video - so I shared it - you wanna use it as a platform to threaten my life and wellbeing? I will crush your fucking windpipe you little coward - so either roll up or tell me where I’m rolling to or you just prove you’re a coward that’s all talk.");
   }
 
-  if ((message.content.includes('computer') || message.content.includes('Computer')) && (message.content.includes('virus') || message.content.includes('Virus'))) {
+  /*if ((message.content.includes('computer') || message.content.includes('Computer')) && (message.content.includes('virus') || message.content.includes('Virus'))) {
     const flag = client.emojis.cache.find(emoji => emoji.name === "flag_us");
     message.channel.send("${flag}guys${flag}if${flag}you${flag}receive${flag}an${flag}email${flag}saying${flag}naked${flag}pictures${flag}of${flag}Donald${flag}Trump${flag}don’t${flag}open${flag}it${flag}it${flag}is${flag}a${flag}virus${flag}that${flag}puts${flag}USA${flag}flags${flag}between${flag}everything${flag}you${flag}type${flag}");
-  }
+  }*/
 
   if (message.content.includes('meow') || message.content.includes('Meow')) {
     message.reply("Wowwwww, you meow like a cat! That means you are one, right? Shut the fuck up. If you really want to be put on a leash and treated like a domestic animal then that’s called a fetish, not “quirky” or “cute”. What part of you seriously thinks that any part of acting like a feline establishes a reputation of appreciation? Is it your lack of any defining aspect of personality that urges you to resort to shitty representations of cats to create an illusion of meaning in your worthless life? Wearing “cat ears” in the shape of headbands further notes the complete absence of human attribution to your false sense of personality, such as intelligence or charisma in any form or shape. Where do you think this mindset’s gonna lead you? You think you’re funny, random, quirky even? What makes you think that acting like a fucking cat will make a goddamn hyena laugh? I, personally, feel extremely sympathetic towards you as your only escape from the worthless thing you call your existence is to pretend to be an animal. But it’s not a worthy choice to assert this horrifying fact as a dominant trait, mainly because personality traits require an initial personality to lay their foundation on. You’re not worthy of anybody’s time, so go fuck off, “cat-guy”.");
   }
 
   if (message.content.includes('test')) {
+    cosole.log(message);
     const flag = client.emojis.cache.find(emoji => emoji.name === "flag_us");
     message.reply(`test${flag}test`);
   }
