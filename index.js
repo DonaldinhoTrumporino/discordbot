@@ -325,9 +325,7 @@ client.on("message", async message => {
   }
 
   if (message.content.includes('test')) {
-    console.log(message);
-    const flag = client.emojis.cache.find(emoji => emoji.name === "flag_us");
-    message.reply(`test${flag}test`);
+    message.reply("test<:flag_us:701560813340852293>test");
   }
 
   if ((message.author.id.toString() == TravisID) && (Math.random() < TriggerFrequency)) {
