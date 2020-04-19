@@ -245,7 +245,7 @@ client.on("message", async message => {
 // testing random functionality
 
   if (message.author.id.toString() === PatID) {
-    if(Math.random() < .2) 
+    if(Math.random() < .02) 
 	message.channel.send('And then theres my good friend Pat whos been a bigly help to us for a long time');
   }
 
@@ -275,7 +275,7 @@ client.on("message", async message => {
 
   if (message.content.includes('moan') ||
     message.content.includes('MOAN') ||
-    message.content.includes('Moan') && (Math.random() < TriggerFrequency)) {
+    message.content.includes('Moan') && (Math.random() < TriggerFrequency*2.5)) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
@@ -287,7 +287,7 @@ client.on("message", async message => {
   }
 
   if (message.content.includes('rosie') ||
-    message.content.includes('Rosie') && (Math.random() < TriggerFrequency)) {
+    message.content.includes('Rosie') && (Math.random() < TriggerFrequency*2.5)) {
     const channel = client.channels.fetch(ddstdID)
       .then(channel => {
         channel.join()
@@ -310,6 +310,19 @@ client.on("message", async message => {
     message.channel.send("Reporting this sub to /r/againsthatesubreddits and the admins. You guys are done. Think you won? Guess what. Tolerance and progressive values always win in the end, Trumpists. Ever wonder what it was like to be Voldemort getting annihilated right after the Elder wand flew into Harry's hand? You're about to feel it tenfold once you feel the wrath of pissed-off, progressive redditors raging at the fact that Trumpers like you get to walk around even AFTER you've already won. You were supposed to graciously accept your (rigged) election results, give it a rest, and stay in /r/The_Cheeto rather than rub it in our faces that your Orange Hitler won. Now? It's time for you to be put in your places. You've already infected the precious mind of my beloved wife's son, and now you'll pay. Edit: Just updated SRS, Resist, It's Going Down, and many other like-minded comrades on the existence of this cheeto Nazi recruitment forum. Stand down against Nazis? Fuck that noise. I'd turn down the ability to see the next five new episodes of Rick Sanchez fucking shit up in multidimensional hyperspace with his grandson just so I could have the chance to crush deplorables like you. Other progressive redditors reading my outcry for action against the bane of reddits existence that is this subreddit, consider this: What if I told you that the Republic was now under the control of a Dark Lord of the Sith? I hope those who like the cut of my jib and my call to /r/esist take notice. Now is the time for action. Wubba lubba dub dub, motherfuckers.");
   }
 
+  if (message.content.includes('the fuck did you just fucking say') || message.content.includes('avy seal copypasta')) {
+    message.reply("I’m here all weekend - come on ya fuckin punk ass swimmer. I’ll be waiting on ya - I’ll be waiting on your punk ass - wait matter of fact give me your address I’ll come to wherever you are and give you a chance to make good on your promises since I know you won’t actually come here me Navy SEAL lol what BUDS class were you in bitch? See you’re talking to an Army Ranger - RSC 13-2 - I’ve ACTUALLY been on clandestine missions - I’ve ACTUALLY been in gunfights - and on the 1% chance that you’re ACTUALLY a buds graduate I’ll tell you RQRF in the korangal - we were saving baby seals on a daily basis because they have no fucking idea what to do when bullets start flying the other direction - so no - I’m not worried about you - the USMC is still using gulf war hand me downs so you’re saying your equipment is dated and sporting extensive wear and tear? Annnndddd no need to involve your top secret lies I mean spies whoops - cuzzzzz I just told you and the internet where I live - you can come here or give me your address and I’ll come there - either way.\n\nI don’t know what copypasta means - I don’t know what doxxed yourself means - does not knowing these definitions make me a dumbass moron? What’s your address and I’ll come show you what a real SOF guy is capable of - you threaten my life you little stolen valor fuck brick? Navy SEAL give me a goddamn break you fucking retard - if you grow a set and decide you wanna tie asses with me just come knock on my door - I didn’t do a fucking thing to you people but share a video of my waifu - period - if you wanna threaten my life over that be prepared for the consequences - I’m not on here looking for trouble if I was then why would I post a video of a cat on this channel? God almighty and I only posted it here because my woman told me to - I’d never heard of this channel - had I known making a cute pun including the cats name would yield such backlash from faggot ass frenchy stolen valor pukes and broke dick hadji wan kenobis id have just not posted it - I thought the members of this sub would enjoy this video - so I shared it - you wanna use it as a platform to threaten my life and wellbeing? I will crush your fucking windpipe you little coward - so either roll up or tell me where I’m rolling to or you just prove you’re a coward that’s all talk.");
+  }
+
+  if ((message.content.includes('computer') || message.content.includes('Computer')) && (message.content.includes('virus') || message.content.includes('Virus'))) {
+    const flag = client.emojis.find(emoji => emoji.name === "flag_us");
+    message.channel.send("${flag}guys${flag}if${flag}you${flag}receive${flag}an${flag}email${flag}saying${flag}naked${flag}pictures${flag}of${flag}Donald${flag}Trump${flag}don’t${flag}open${flag}it${flag}it${flag}is${flag}a${flag}virus${flag}that${flag}puts${flag}USA${flag}flags${flag}between${flag}everything${flag}you${flag}type${flag}");
+  }
+
+  if (message.content.includes('meow') || message.content.includes('Meow')) {
+    message.reply("Wowwwww, you meow like a cat! That means you are one, right? Shut the fuck up. If you really want to be put on a leash and treated like a domestic animal then that’s called a fetish, not “quirky” or “cute”. What part of you seriously thinks that any part of acting like a feline establishes a reputation of appreciation? Is it your lack of any defining aspect of personality that urges you to resort to shitty representations of cats to create an illusion of meaning in your worthless life? Wearing “cat ears” in the shape of headbands further notes the complete absence of human attribution to your false sense of personality, such as intelligence or charisma in any form or shape. Where do you think this mindset’s gonna lead you? You think you’re funny, random, quirky even? What makes you think that acting like a fucking cat will make a goddamn hyena laugh? I, personally, feel extremely sympathetic towards you as your only escape from the worthless thing you call your existence is to pretend to be an animal. But it’s not a worthy choice to assert this horrifying fact as a dominant trait, mainly because personality traits require an initial personality to lay their foundation on. You’re not worthy of anybody’s time, so go fuck off, “cat-guy”.");
+  }
+
   if ((message.author.id.toString() == TravisID) && (Math.random() < TriggerFrequency)) {
     message.react(client.emojis.cache.find(emoji => emoji.name === "theW"));
   }
@@ -322,14 +335,6 @@ client.on("message", async message => {
     message.react(client.emojis.cache.find(emoji => emoji.name === "authleft"));
   }
 
-  if (message.content.includes('travis') && (Math.random() < TriggerFrequency)) {
-    message.channel.send('Travis is a furry!!!');
-  }
-  
-  if (message.content.includes('trann') || message.content.includes('trans')) {
-    message.channel.send("", {file: "https://i.imgur.com/L3nGm4X.png"});
-  }
-  
   if (message.content.includes('nigga') && (Math.random() < TriggerFrequency)) {
     message.channel.send("", {file: "https://i.imgur.com/CcsdIVX.jpeg"});
   }
@@ -389,7 +394,8 @@ client.on("message", async message => {
   }
 
   if (message.author.id.toString() === KowpakID &&
-    message.content.includes('www')) {
+    message.content.includes('www') && 
+    (Math.random() < TriggerFrequency)) {
       message.channel.send("gUyS a BoT wIlL bE sUpEr cOol!11!");
   }
 
