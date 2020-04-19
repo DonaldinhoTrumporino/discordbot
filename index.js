@@ -325,7 +325,7 @@ client.on("message", async message => {
   }
 
   if (message.content.includes('test')) {
-    cosole.log(message);
+    console.log(message);
     const flag = client.emojis.cache.find(emoji => emoji.name === "flag_us");
     message.reply(`test${flag}test`);
   }
