@@ -244,7 +244,7 @@ client.on("message", async message => {
 /***** current shenanigans *****/
 // testing random functionality
 
-  if (message.author.id.toString() === KowpakID && message.content.includes("testing")) { 
+  if (message.author.id === KowpakID && message.content.includes("testing")) { 
     message.delete();
   }
 
