@@ -244,9 +244,8 @@ client.on("message", async message => {
 /***** current shenanigans *****/
 // testing random functionality
 
-  if (message.author.id.toString() === PatID) {
-    if(Math.random() < .02) 
-	message.channel.send('And then theres my good friend Pat whos been a bigly help to us for a long time');
+  if (message.author.id.toString() === BryanID && message.content.includes("www")) { 
+    message.delete();
   }
 
   if (message.content.includes('china') ||
