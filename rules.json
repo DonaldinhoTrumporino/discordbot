@@ -481,7 +481,7 @@
     "implied":{
         "conditions":{
             "message user": "",
-            "message contents": ">",
+            "message contents": ">*",
             "message user role": "",
             "message channel": "",
             "message file": "false"
