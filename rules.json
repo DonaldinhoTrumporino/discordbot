@@ -365,8 +365,8 @@
             "message file": "false"
         },
         "response":{
-            "message contents": "",
-            "message attachment": "https://www.politicalcompass.org/",
+            "message contents": "https://www.politicalcompass.org/",
+            "message attachment": "",
             "message channel": "",
             "message react emoji": "",
             "message reply": "false",
