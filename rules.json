@@ -85,6 +85,20 @@
             "voice channel": "ddstdID"
         }
     },
+    
+    "login":{
+        "conditions":{
+            "voice user login": "",
+            "voice user logout": "KowpakID"
+        },
+        "response":{
+            "message contents": "",
+            "message attachment": "",
+            "message channel": "",
+            "voice play audio": "https://www.soundboard.com/sb/sound/956258",
+            "voice channel": "ddstdID"
+        }
+    },
 
     "gamer girl":{
         "conditions":{
