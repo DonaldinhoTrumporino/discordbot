@@ -8,13 +8,13 @@
             "message file": "false"
         },
         "response":{
-            "message contents": "sucker",
+            "message contents": "",
             "message attachment": "",
             "message channel": "",
             "message react emoji": "",
             "message reply": "false",
             "message delete": "false",
-            "voice play audio": ""
+            "voice play audio": "/home/pi/discordbotrun/audio/xfiles.mp3"
         }
     },
 
