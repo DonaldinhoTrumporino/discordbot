@@ -95,7 +95,7 @@
             "message contents": "",
             "message attachment": "",
             "message channel": "",
-            "voice play audio": "https://www.soundboard.com/sb/sound/956258",
+            "voice play audio": "/home/pi/discordbotrun/audio/xfiles.mp3",
             "voice channel": "ddstdID"
         }
     },
