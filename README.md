@@ -12,7 +12,7 @@ Each rule is given a name and is broken into 2 parts.  The "Conditions" filters 
 
 #### Message Events
 
-Message events can filter on the following keys
+Message events can filter on the following keys:
 
 ```
 "message user"        ->        Trigger on message from a specific user (use tag)
@@ -38,7 +38,7 @@ Blank options will trigger on everything.  The following rule will trigger on ev
 
 #### Voice Events
 
-Voice events can filter on the following keys
+Voice events can filter on the following keys:
 
 ```
 "voice user login"      ->      Trigger if a user logs in to the voice channel
@@ -56,3 +56,19 @@ Blank options will trigger on everything.  The following rule will trigger every
         },
 ```
 
+#### Responses
+
+Each rule can trigger a message response, voice response, or both.
+
+```
+"message contents"     ->    send a message with this text
+"message attachment"   ->    send a message with this attachment
+"message channel"      ->    send a message to this channel
+"message react emoji"  ->    react to the message that triggered this rule (do not use with a voice event)
+"message reply"        ->    respond to a message by tagging the user (do not use with a voice event)
+"message delete"       ->    delete the message that triggered this rule (do not use with a voice event)
+"voice play audio"     ->    play an audio recording
+"voice channel"        ->    specify the channel to play audio (optional)
+```
+
+The "message react emoji", "message reply", and "message reply" are only effective when responding to a message event so don't use these if you are expecting a voice event.
