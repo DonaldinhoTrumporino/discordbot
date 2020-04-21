@@ -208,7 +208,7 @@
         }
     },
 
-    "travis":{
+    "travis emoji":{
         "conditions":{
             "message user": "TravisID",
             "message contents": "",
@@ -226,13 +226,13 @@
         }
     },
 
-    "howard":{
+    "howard emoji":{
         "conditions":{
             "message user": "HowardID",
             "message contents": "",
             "message user role": "",
             "message channel": "",
-            "message file": "false"
+            "message file": "true"
         },
         "response":{
             "message contents": "",
@@ -244,7 +244,7 @@
         }
     },
 
-    "taylor":{
+    "taylor emoji":{
         "conditions":{
             "message user": "DickensID",
             "message contents": "",
@@ -481,7 +481,7 @@
     "implied":{
         "conditions":{
             "message user": "",
-            "message contents": ">*",
+            "message contents": "> ",
             "message user role": "",
             "message channel": "",
             "message file": "false"
