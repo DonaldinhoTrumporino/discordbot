@@ -478,9 +478,27 @@
         }
     },
 
-    "implied":{
+    "implied max":{
         "conditions":{
-            "message user": "",
+            "message user": "MaxID",
+            "message contents": ">",
+            "message user role": "",
+            "message channel": "",
+            "message file": "false"
+        },
+        "response":{
+            "message contents": "",
+            "message attachment": "https://i.kym-cdn.com/entries/icons/original/000/002/679/Implications_everywhere.jpg",
+            "message channel": "",
+            "message react emoji": "",
+            "message reply": "false",
+            "message delete": "false"
+        }
+    },
+
+    "implied howard":{
+        "conditions":{
+            "message user": "HowardID",
             "message contents": ">",
             "message user role": "",
             "message channel": "",
