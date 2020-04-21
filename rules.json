@@ -226,9 +226,27 @@
         }
     },
 
-    "taylor":{
+    "howard":{
         "conditions":{
             "message user": "HowardID",
+            "message contents": "",
+            "message user role": "",
+            "message channel": "",
+            "message file": "false"
+        },
+        "response":{
+            "message contents": "",
+            "message attachment": "",
+            "message channel": "",
+            "message react emoji": "authleft",
+            "message reply": "false",
+            "message delete": "false"
+        }
+    },
+
+    "taylor":{
+        "conditions":{
+            "message user": "DickensID",
             "message contents": "",
             "message user role": "",
             "message channel": "",
@@ -243,11 +261,11 @@
             "message delete": "false"
         }
     },
-
-    "howard":{
+    
+    "despite":{
         "conditions":{
-            "message user": "DickensID",
-            "message contents": "",
+            "message user": "",
+            "message contents": "despite making",
             "message user role": "",
             "message channel": "",
             "message file": "false"
@@ -256,7 +274,7 @@
             "message contents": "",
             "message attachment": "",
             "message channel": "",
-            "message react emoji": "authleft",
+            "message react emoji": "authright",
             "message reply": "false",
             "message delete": "false"
         }
