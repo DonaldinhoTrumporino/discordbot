@@ -231,8 +231,8 @@
             "message user": "HowardID",
             "message contents": "",
             "message user role": "",
-            "message channel": "",
-            "message file": "true"
+            "message channel": "qsID",
+            "message file": "false"
         },
         "response":{
             "message contents": "",
