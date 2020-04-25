@@ -51,45 +51,10 @@
             "voice channel": "ddstdID"
         }
     },
-
-    "moan":{
-        "conditions":{
-            "message user": "",
-            "message contents": "moan",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "",
-            "message channel": "",
-            "voice play audio": "https://soundfishing.eu/download.php?id=962",
-            "voice channel": "ddstdID"
-        }
-    },
-
-    "rosie":{
-        "conditions":{
-            "message user": "",
-            "message contents": "rosie",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "",
-            "message channel": "",
-            "voice play audio": "https://soundfishing.eu/download.php?id=962",
-            "voice channel": "ddstdID"
-        }
-    },
     
     "login":{
         "conditions":{
-            "voice user login": "",
-            "voice user logout": "KowpakID"
+            "voice user login": ""
         },
         "response":{
             "message contents": "",
@@ -208,24 +173,6 @@
         }
     },
 
-    "travis emoji":{
-        "conditions":{
-            "message user": "TravisID",
-            "message contents": "",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "",
-            "message channel": "",
-            "message react emoji": "theW",
-            "message reply": "false",
-            "message delete": "false"
-        }
-    },
-
     "howard emoji":{
         "conditions":{
             "message user": "HowardID",
@@ -275,78 +222,6 @@
             "message attachment": "",
             "message channel": "",
             "message react emoji": "authright",
-            "message reply": "false",
-            "message delete": "false"
-        }
-    },
-
-    "nigga":{
-        "conditions":{
-            "message user": "",
-            "message contents": "nigg",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "https://i.imgur.com/CcsdIVX.jpeg",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "false",
-            "message delete": "false"
-        }
-    },
-
-    "porn":{
-        "conditions":{
-            "message user": "",
-            "message contents": "porn",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "https://i.4cdn.org/gif/1586742606555.webm",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "false",
-            "message delete": "false"
-        }
-    },
-
-    "trump":{
-        "conditions":{
-            "message user": "",
-            "message contents": "trump",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "https://i.imgur.com/MSotV1j.jpg",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "false",
-            "message delete": "false"
-        }
-    },
-
-    "donald":{
-        "conditions":{
-            "message user": "",
-            "message contents": "donald",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "",
-            "message attachment": "https://i.imgur.com/MSotV1j.jpg",
-            "message channel": "",
-            "message react emoji": "",
             "message reply": "false",
             "message delete": "false"
         }
@@ -406,42 +281,6 @@
         }
     },
 
-    "fish scott":{
-        "conditions":{
-            "message user": "BryanID",
-            "message contents": "www",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "Fish Scott! Entertain Me!",
-            "message attachment": "",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "true",
-            "message delete": "false"
-        }
-    },
-
-    "fake news":{
-        "conditions":{
-            "message user": "MaxID",
-            "message contents": "www",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "Fake News",
-            "message attachment": "",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "true",
-            "message delete": "false"
-        }
-    },
-
     "howard government":{
         "conditions":{
             "message user": "HowardID",
@@ -456,24 +295,6 @@
             "message channel": "",
             "message react emoji": "",
             "message reply": "true",
-            "message delete": "false"
-        }
-    },
-
-    "kowpak cool bot":{
-        "conditions":{
-            "message user": "KowpakID",
-            "message contents": "www",
-            "message user role": "",
-            "message channel": "",
-            "message file": "false"
-        },
-        "response":{
-            "message contents": "gUyS a BoT wIlL bE sUpEr cOol!11!",
-            "message attachment": "",
-            "message channel": "",
-            "message react emoji": "",
-            "message reply": "false",
             "message delete": "false"
         }
     },
@@ -559,7 +380,7 @@
             "message file": "false"
         },
         "response":{
-            "message contents": "grill up bitches!!",
+            "message contents": "",
             "message attachment": "https://media.giphy.com/media/26n7aLwSYp9jSdNss/giphy.gif",
             "message channel": "",
             "message react emoji": "",
