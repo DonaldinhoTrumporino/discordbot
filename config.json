@@ -1,0 +1,13 @@
+{
+    "bot" : "bottestingserver",
+    "token"  : "NzAxNzk1NTM0MTAwMjM0MzQw.XrLjCg.QyGxGR9brBysIaWMoOdmn9Js9E8",
+    "prefix" : "+",
+    "command" : "$",
+    "timeout" : 120,
+    "path"  : "./",
+    "defaultText" : "701795436767215689",
+    "defaultVoice" : "701795436767215690",
+    "botid" : "701795534100234340",
+    "myid" : "141019900993994753",
+    "playing" : "testing"
+}
