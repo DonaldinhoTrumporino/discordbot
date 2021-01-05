@@ -2,14 +2,19 @@ const config = require("/home/mike/bottestingserver/config.json");
 
 // Load up the discord.js library
 const Discord = require("discord.js");
-const fs = require("fs")
+const fs = require("fs");
+const { exit } = require("process");
 
 const botResponse = require(config.path + "response.js");
 const botManage = require(config.path + "manage.js");
 const botManageRules = require(config.path + "manageRules.js");
 const botAddNewRule = require(config.path + "addnewrule.js");
 const botEcho = require(config.path + "botEcho.js");
+const aoc = require(config.path + "aoc.js");
+const rolling = require(config.path + "rolling.js");
+const timezone = require(config.path + "timezone.js");
 
+let rollUsers = {}
 
 /********************************************** start code **********************************************/
 
@@ -31,6 +36,7 @@ client.on("message", async message => {
   
     if (message.author.bot) return;
 
+    // if a user sends a direct message to the bot, copy that message and send to me in a dm
     if (client.channels.cache.find(channel => channel.id === message.channel.id).type === "dm"){
         if (message.author.id !== config.myid)
         {
@@ -51,7 +57,19 @@ client.on("message", async message => {
             }
         }
     }
+    else{
+        // 4chan roll shenanigans
+        if (config.rolling){
+            rolling.rollMessage(client, message, rollUsers);
+        }
 
+        // howard needs his sleep
+        if (config.timezone){
+            timezone.timezoneMessage(client, message);
+        }
+    }
+
+    // if a user is adding a rule, interact with the bot add rule manager
     if (fs.existsSync(config.path + message.author.id + "user.json") && message.content.indexOf(config.command) !== 0){
         let addjson = JSON.parse(fs.readFileSync(config.path + message.author.id + "user.json"))
         if (Date.now()-addjson["timestamp"] > config.timeout*1000){
@@ -68,6 +86,7 @@ client.on("message", async message => {
         }
     }
 
+    // if a user is echoing, use the bot echo manager
     if (fs.existsSync(config.path + message.author.id + "echo.json") && message.content.indexOf(config.command) !== 0){
         let echojson = JSON.parse(fs.readFileSync(config.path + message.author.id + "echo.json"))
         if (Date.now()-echojson["timestamp"] <= config.timeout*1000){
@@ -81,6 +100,7 @@ client.on("message", async message => {
         fs.unlinkSync(config.path + message.author.id + "echo.json")
     }
 
+    // if the message starts with '+' use the bot default command manager
     if (message.content.indexOf(config.prefix) === 0){
         // Here we separate our "command" name, and our "arguments" for the command. 
         // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
@@ -108,5 +128,13 @@ client.on("voiceStateUpdate", (oldState, newState) => {
     botResponse.botVoice(client, oldState, newState);  
   
 });
+
+if (config.adventofcode){
+    function adventofcode() {
+        aoc.adventofcode(client);
+        //exit(0);
+    }
+    setInterval(adventofcode, 1000);
+}
 
 client.login(config.token);
